@@ -25,6 +25,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
  +--| Primary Server             |
  |  | - Windows Server 2019      |
  |  | - SQL Server 2019          |
+ |  | - Milestone Xprotect 2020  |
  |  | - EXPRESSCLUSTER X 4       |
  |  +----------------------------+
  |                                
@@ -32,6 +33,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
  +--| Secondary Server           |
  |  | - Windows Server 2019      |
  |  | - SQL Server 2019          |
+ |  | - Milestone Xprotect 2020  |
  |  | - EXPRESSCLUSTER X 4       |
  |  +----------------------------+
  |
@@ -164,13 +166,13 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Click OK, then Navigate back to Cluster WebUI and select Start Cluster.
 
 #### Configure Milestone Database in Mirror drive
-1. Using SQL management studio.
+1. Using SQL management studio:
 1. Right click the milestone database name
-    - tasks
-      - detach and click OK.on the database detach window.
-1. Right click databases
-    - attach
-      - add and point to the mdf file. It will automatically take the ldf file to the attach databases window.
+	- tasks
+		- detach and click OK.on the database detach window
+1. Right click databases:
+	- attach
+		- add and point to the mdf file. It will automatically take the ldf file to the attach databases window		
 
 ### Check Milestone Cluster
 #### On Primary Server
