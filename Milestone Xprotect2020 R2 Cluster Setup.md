@@ -136,9 +136,9 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Click Next.
 1. Click on Connect and select the service MSSQLSERVER from the drop down.
 1. Click OK.
-1. lick Next (for default values) to learn more about parameters please refer the Express Cluster Reference Guide. Click Next.
+1. Click Next (for default values) to learn more about parameters please refer the Express Cluster Reference Guide. Click Next.
 1. Click Finish.
-1. ight click on failover and click Add Resource in builder window.
+1. Right click on failover and click Add Resource in builder window.
 1. Choose service resource.
 1. Type a service name to the resource (Ex: Milestone Data service) and add optional comments if required.
 1. Click Next.
@@ -209,8 +209,8 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Exit from the database
 	```bat
 	1> quit
-1. Move the failover group to Secondary Server
 	```
+1. Move the failover group to Secondary Server
 
 #### On Secondary Server
 1. Confirm that the failover group is active normally on the server
