@@ -6,7 +6,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
 ### EXPRESSCLUSTER X
 - https://www.nec.com/en/global/prod/expresscluster/en/support/manuals.html
 
-### EXPRESSCLUSTER X HA/DR solution with Milestone Xprotect
+### EXPRESSCLUSTER X HA/DR solution with Milestone XProtect
 - https://www.milestonesys.com/marketplace/nec/nec-expresscluster-x-ha--dr-solution/
 
 
@@ -15,7 +15,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
 - OS: Windows Server 2019
 - SW:
 	- SQL Server 2019 Standard
-	- Milestone Xprotect2020 R2
+	- Milestone XProtect2020 R2
 	- EXPRESSCLUSTER X 4.0/4.1/4.2
 
 ```bat
@@ -25,7 +25,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
  +--| Primary Server             |
  |  | - Windows Server 2019      |
  |  | - SQL Server 2019          |
- |  | - Milestone Xprotect 2020  |
+ |  | - Milestone XProtect 2020  |
  |  | - EXPRESSCLUSTER X 4       |
  |  +----------------------------+
  |                                
@@ -33,7 +33,7 @@ This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mi
  +--| Secondary Server           |
  |  | - Windows Server 2019      |
  |  | - SQL Server 2019          |
- |  | - Milestone Xprotect 2020  |
+ |  | - Milestone XProtect 2020  |
  |  | - EXPRESSCLUSTER X 4       |
  |  +----------------------------+
  |
@@ -82,7 +82,7 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 	- Ready to install  
 		Install
 
-### Milestone Mileston Xprotect2020 R2 Installation on Windows
+### Milestone XProtect2020 R2 Installation on Windows
 - https://doc.milestonesys.com/2020r2/en-US/standard_features/sf_mc/sf_installation/mc_installthesystem.htm?TocPath=XProtect%20VMS%20products%7CXProtect%20VMS%20administrator%20manual%7CInstallation%7C_____1#InstallyoursystemCustomoption 
 
 #### Data Directories configuration On Primary
