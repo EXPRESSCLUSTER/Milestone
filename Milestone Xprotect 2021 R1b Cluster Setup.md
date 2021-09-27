@@ -164,6 +164,8 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Click Finish.
 1. Select File and then Upload the Configuration File.
 1. Click OK, then Navigate back to Cluster WebUI and select Start Cluster.
+	
+## If required can be add other Milestone Xprotect services as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server. 
 
 #### Configure Milestone Database in Mirror drive
 1. Using SQL management studio:
