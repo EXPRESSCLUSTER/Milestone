@@ -1,5 +1,5 @@
 # Milestone XProtect VMS Products 2021 R1b on Windows EXPRESSCLUSTER X Quick Start Guide
-This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mirror Disk configuratoin.
+This article shows how to setup SQL Server 2019 Cluster with EXPRESSCLUSTER X Mirror Disk configuration.
 
 ## Reference
 
@@ -50,8 +50,8 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 #### On Primary Server and Secondary Server
 1. Start SQL Server Installer and select as follows:
 	- Installation  
-		Select "New SQL Server stand-alone installation or add features to an existing installaion"
-	- Microsift Update  
+		Select "New SQL Server stand-alone installation or add features to an existing installation"
+	- Microsoft Update  
 		Default or as you like
 	- Product Updates  
 		Default or as you like
@@ -71,9 +71,9 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 			- SQL Server Database Engine:	Manual
 			- SQL Server Browser:	As you like
 	- Database Engine Configuration
-		- Server Coonfiguration
+		- Server Configuration
 			- As you like
-				- **Note** We recommend to set SA Acount with Mixed Mode or add Domain Account for Windows authentication because the database should be accessible from both Primary and Secondary Servers.
+				- **Note** We recommend to set SA Account with Mixed Mode or add Domain Account for Windows authentication because the database should be accessible from both Primary and Secondary Servers.
 		- Data Directories
             - C:\Program Files\Microsoft SQL Server\
 			- User database directory:	C:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\Data
@@ -165,7 +165,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Select File and then Upload the Configuration File.
 1. Click OK, then Navigate back to Cluster WebUI and select Start Cluster.
 	
-## If required can be add other Milestone Xprotect services as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server. 
+## If required other Milestone XProtect services can be added as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server. 
 
 #### Configure Milestone Database in Mirror drive
 1. Using SQL management studio:
@@ -183,7 +183,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
    	```bat
 	> sqlcmd -S localhost -U <username> -P <password>
 	```
-2. Create a test database and table and inser a value to it
+2. Create a test database and table and insert a value to it
 	```bat
 	1> create database testdb
 	2> go
