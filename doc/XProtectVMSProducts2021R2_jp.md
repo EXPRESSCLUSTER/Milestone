@@ -224,14 +224,16 @@
 1. Cluster WebUI を起動し、設定モードに切り替えてください。
 1. スクリプトリソースの start.bat, stop.bat を添付のように編集してください。
 1. XProtect のサービスを制御するためのサービスリソースを追加してください。サービス名は以下になります。
-   - Milestone XProtect Data Collector Server
-   - Milestone XProtect Log Server
-   - Milestone XProtect Management Server
-   - Milestone XProtect Mobile Server
-   - Milestone XProtect Recording Server
-   - MilestoneEventServerService
-     - 以下の事象を回避するため、サービス名での登録を推奨いたします。
-       - https://www.support.nec.co.jp/View.aspx?id=3150114558
+   ```
+   Milestone XProtect Data Collector Server
+   Milestone XProtect Log Server
+   Milestone XProtect Management Server
+   Milestone XProtect Mobile Server
+   Milestone XProtect Recording Server
+   MilestoneEventServerService
+   ```
+   - 以下の事象を回避するため、サービス名での登録を推奨いたします。
+     - https://www.support.nec.co.jp/View.aspx?id=3150114558
 1. 追加後、依存関係が以下のようになるように設定してください。
    |深度|リソース|用途|
    |-|-|-|
@@ -247,6 +249,16 @@
    |4|サービスリソース|MilestoneEventServerService の制御|
 1. クラスタの構成情報を反映してください。
 1. Cluster WebUI または clpgrp コマンドで、フェイルオーバグループを起動してください。
+
+## SQL Server 監視リソースの追加
+1. データベース Surveillance, Surveillance_IDP, SurveillanceLogServerV2 を監視するための SQL Server 監視リソースを 3 つ追加します。
+   - 監視レベル: レベル2 (update/select での監視)
+   - データベース名: それぞれ、Surveillance, Surveillance_IDP, SurveillanceLogServerV2 を設定してください。
+   - インスタンス名: MSSQLSERVER
+   - ユーザ名: SA
+   - パスワード: SA のパスワード
+   - 監視テーブル: SQLWATCH
+   - ODBC ドライバ: ODBC Driver 17 for SQL Server
 
 ## 参考
 ### XProtect のサービス一覧
