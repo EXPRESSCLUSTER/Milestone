@@ -222,7 +222,7 @@
    exec sp_detach_db 'SurveillanceLogServerV2',TRUE
    ```
 1. Cluster WebUI を起動し、設定モードに切り替えてください。
-1. スクリプトリソースの start.bat, stop.bat を添付のように編集してください。
+1. スクリプトリソースの [start.bat](..\script\script-DB\start.bat), [stop.bat](..\script\script-DB\stop.bat) を添付のように編集してください。start.bat, stop.bat の password を変更してください。
 1. XProtect のサービスを制御するためのサービスリソースを追加してください。サービス名は以下になります。
    ```
    Milestone XProtect Data Collector Server
