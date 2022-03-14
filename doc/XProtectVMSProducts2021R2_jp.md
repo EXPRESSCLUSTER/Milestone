@@ -88,9 +88,9 @@
       ALTER DATABASE Surveillance_IDP MODIFY FILE ( NAME = Surveillance_IDP_log, FILENAME = 'X:\sql\data\Surveillance_IDP_log.ldf' );
       ALTER DATABASE SurveillanceLogServerV2 MODIFY FILE ( NAME = SurveillanceLogServerV2, FILENAME = 'X:\sql\data\SurveillanceLogServerV2.mdf' );
       ALTER DATABASE SurveillanceLogServerV2 MODIFY FILE ( NAME = SurveillanceLogServerV2_log, FILENAME = 'X:\sql\data\SurveillanceLogServerV2_log.ldf' );
-      ALTER DATABASE Surveillance SET OFFLINE;
-      ALTER DATABASE Surveillance_IDP SET OFFLINE;
-      ALTER DATABASE SurveillanceLogServerV2 SET OFFLINE;
+      alter database [Surveillance] set offline with ROLLBACK IMMEDIATE
+      alter database [Surveillance_IDP] set offline with ROLLBACK IMMEDIATE
+      alter database [SurveillanceLogServerV2] set offline with ROLLBACK IMMEDIATE
       ```
    1. 以下の mdf, ldf ファイルを Explorer などでミラーディスク上 (e.g. X:\sql\data) に、コピーしてください。
       ```
