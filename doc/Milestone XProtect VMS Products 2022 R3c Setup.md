@@ -216,7 +216,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Move the failover group to Secondary Server
 
 #### On Secondary Server
-1. Confirm that the failover group is active normally on the server
+1. Confirm that the failover group is active normally on the Server
 1. Connect to SQL Server
 	```bat
 	> sqlcmd -S localhost -U SA -P <password>
@@ -238,4 +238,4 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 	```bat
 	1> quit
 	```
-1. Move the failover group to the Primary Sarver.
+1. Move the failover group to the Primary Server.
