@@ -85,7 +85,7 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 ### Milestone XProtect 2022 R3c Installation on Windows
 - https://doc.milestonesys.com/latest/en-US/standard_features/sf_mc/sf_installation/mc_installthesystem.htm
 
-#### Data Directories configuration On Primary
+#### Data Directories configuration On Primary Server
 1. Confirm that the failover group is active on the server
 1. Create a folder on Mirror Disk  
    
@@ -96,13 +96,13 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 2. Start SQL Server Configuration Manager
 3. Select [SQL Server Services] at the left tree
 4. Right click [SQL Server (<instance name>)] and select [Properties]
-5. Goto [Setup Parameters] tab and edit existing parameters as follow:
+5. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
-		- -dC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\master.md
-		- -lC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\mastlog.ld
+		- -dC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\master.mdf
+		- -lC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\mastlog.ldf
 	- After:
-		- -dE:\MSSQL\DATA\master.md
-		- -lE:\MSSQL\DATA\mastlog.ld
+		- -dE:\MSSQL\DATA\master.mdf
+		- -lE:\MSSQL\DATA\mastlog.ldf
 
 1. Check SQL Server is installed normally.
 	1. Start Windows Service Manager and start SQL Server service.
@@ -120,17 +120,17 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 		- add and point to the mdf file. It will automatically take the ldf file to the attach databases window.
 
 #### Data Directories configuration On Secondary Server
-1. Confirm that the failover group is active on the server.
+1. Confirm that the failover group is active on the secondary server.
 1. Start SQL Server Configuration Manager.
 1. Select [SQL Server Services] at the left tree.
 1. Right click [SQL Server (<instance name>)] and select [Properties]
-1. Goto [Setup Parameters] tab and edit existing parameters as follow:
+1. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
-		- -dC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\master.md
-		- -lC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\mastlog.ld
+		- -dC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\master.mdf
+		- -lC:\Program Files\Microsoft SQL Server\MSSQL15.TEST\MSSQL\DATA\mastlog.ldf
 	- After:
-		- -dE:\MSSQL\DATA\master.md
-		- -lE:\MSSQL\DATA\mastlog.ld
+		- -dE:\MSSQL\DATA\master.mdf
+		- -lE:\MSSQL\DATA\mastlog.ldf
 1. Check SQL Server is installed normally.
 	1. Start Windows Service Manager and start SQL Server service.
 	1. Confirm that SQL Server service status becomes running.
