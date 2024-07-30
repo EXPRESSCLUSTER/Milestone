@@ -95,7 +95,7 @@ Please refer [Milestone installation Setup](https://doc.milestonesys.com/latest/
 2. Start SQL Server Configuration Manager
 3. Select [SQL Server Services] at the left tree
 4. Right click [SQL Server (<instance name>)] and select [Properties]
-5. Goto [Setup Parameters] tab and edit existing parameters as follow:
+5. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
 		- -dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf
 		- -lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf
@@ -113,7 +113,7 @@ Please refer [Milestone installation Setup](https://doc.milestonesys.com/latest/
 1. Start SQL Server Configuration Manager.
 1. Select [SQL Server Services] at the left tree.
 1. Right click [SQL Server (<instance name>)] and select [Properties]
-1. Goto [Setup Parameters] tab and edit existing parameters as follow:
+1. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
 		- -dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf
 		- -lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf
@@ -126,7 +126,7 @@ Please refer [Milestone installation Setup](https://doc.milestonesys.com/latest/
 	1. Stop SQL Server service. 
  
 ## Set the Database and application Services to Manual 
-After the SQL Server setup has completed on both servers, set all of the SQL Server and Milestone Services to manual, and make sure that they should stop state.
+After the SQL Server setup is completed on both servers, set all of the SQL Server and Milestone Services to manual, and ensure they are in the stopped state.
 
 ## SQL and Milestone Services Setup in ECX Cluster
 1. Right click on failover and click Add Resource in builder window.
@@ -164,7 +164,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Select File and then Upload the Configuration File.
 1. Click OK, then Navigate back to Cluster WebUI and select Start Cluster.
 	
-## If required other Milestone XProtect services can be added as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server. 
+## If required other Milestone XProtect services can be added as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server.
 
 #### Configure Milestone Database in Mirror drive
 1. Using SQL management studio:
@@ -173,7 +173,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 		- Detach and click OK.on the database detach window
 1. Right click databases:
 	- Attach
-		- Add and point to the mdf file. It will automatically take the ldf file to the attach databases window		
+		- Add and point to the mdf file. It will automatically take the ldf file to the attach databases window
 
 ### Check Milestone Cluster
 #### On Primary Server
@@ -224,7 +224,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 	1> use testdb
 	2> go
 	Changed database context to 'testdb'.
-	1> select * from testtb
+	1> select * from testdb
 	2> go
 	id          name
 	----------- --------------------
@@ -236,4 +236,4 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 	```bat
 	1> quit
 	```
-1. Move the failover group to the Primary Sarver.
+1. Move the failover group to the Primary Server.
