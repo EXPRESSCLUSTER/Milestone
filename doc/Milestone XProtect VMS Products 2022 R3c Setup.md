@@ -137,7 +137,7 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 	1. Stop SQL Server service. 
  
 ## Set the DB and application Services to Manual 
-After the SQL Server setup has completed on both servers, set all of the SQL Server and Milestone Services to manual, and make sure that they should be stop state.
+After the SQL Server setup is completed on both servers, set all of the SQL Server and Milestone Services to manual, and ensure they are in the stopped state.
 
 ## SQL and Milestone Services Setup in Cluster
 1. Right click on failover and click Add Resource in builder window.
@@ -175,7 +175,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 1. Select File and then Upload the Configuration File.
 1. Click OK, then Navigate back to Cluster WebUI and select Start Cluster.
 	
-## If required other Milestone XProtect services can be added as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server. 		
+## If required other Milestone XProtect services can be added as well e.g. Milestone XProtect Log Server, Milestone XProtect Mobile Server, and Milestone XProtect Recording Server.
 
 ### Check Milestone Cluster
 #### On Primary Server
@@ -191,17 +191,17 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 	1> use testdb
 	2> go
 	Changed database context to 'testdb'.
-	1> create table testtb(
+	1> create table testdb(
 	2>  id int,
 	3>  name varchar(20)
 	4> );
 	5> go
-	1> insert into testtb (id, name) values(0, "Milestone");
+	1> insert into testdb (id, name) values(0, "Milestone");
 	2> go
 	```
 1. Confirm the value is inserted
 	```bat
-	1> select * from testtb
+	1> select * from testdb
 	2> go
 	id          name
 	----------- --------------------
@@ -226,7 +226,7 @@ After the SQL Server setup has completed on both servers, set all of the SQL Ser
 	1> use testdb
 	2> go
 	Changed database context to 'testdb'.
-	1> select * from testtb
+	1> select * from testdb
 	2> go
 	id          name
 	----------- --------------------
