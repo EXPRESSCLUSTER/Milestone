@@ -74,10 +74,10 @@ Please refer [Basic Cluster Setup](https://github.com/EXPRESSCLUSTER/BasicCluste
 			- As you like
 				- **Note** We recommend to set SA Account with Mixed Mode or add Domain Account for Windows authentication because the database should be accessible from both Primary and Secondary Servers.
 		- Data Directories
-            - C:\Program Files\Microsoft SQL Server\
-			- User database directory:	C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA
-			- User database log directory:	C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA
-			- Backup directory:	C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup
+			- Data root directory: `C:\Program Files\Microsoft SQL Server\`
+			- User database directory:	`C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA`
+			- User database log directory:	`C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA`
+			- Backup directory:	`C:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\Backup`
 	- Ready to install  
 		Install
 
@@ -88,20 +88,18 @@ Please refer [Milestone installation Setup](https://doc.milestonesys.com/latest/
 1. Confirm that the failover group is active on the server
 1. Create a folder on Mirror Disk  
    
-	```bat
-	e.g.) D:\MSSQL
-	```
+	e.g.) `D:\MSSQL`
 
 2. Start SQL Server Configuration Manager
 3. Select [SQL Server Services] at the left tree
 4. Right click [SQL Server (<instance name>)] and select [Properties]
 5. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
-		- -dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf
-		- -lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf
+		- `-dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf`
+		- `-lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf`
 	- After:
-		- -dD:\MSSQL\DATA\master.mdf
-		- -lD:\MSSQL\DATA\mastlog.ldf
+		- `-dD:\MSSQL\DATA\master.mdf`
+		- `-lD:\MSSQL\DATA\mastlog.ldf`
 
 1. Check SQL Server is installed normally.
 	1. Start Windows Service Manager and start SQL Server service.
@@ -112,14 +110,14 @@ Please refer [Milestone installation Setup](https://doc.milestonesys.com/latest/
 1. Confirm that the failover group is active on the server.
 1. Start SQL Server Configuration Manager.
 1. Select [SQL Server Services] at the left tree.
-1. Right click [SQL Server (<instance name>)] and select [Properties]
+1. Right click [SQL Server (\<instance name\>)] and select [Properties]
 1. Go to [Setup Parameters] tab and edit existing parameters as follow:
 	- Before:
-		- -dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf
-		- -lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf
+		- `-dC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\master.mdf`
+		- `-lC:\Program Files\Microsoft SQL Server\MSSQL16.MSSQLSERVER\MSSQL\DATA\mastlog.ldf`
 	- After:
-		- -dD:\MSSQL\DATA\master.mdf
-		- -lD:\MSSQL\DATA\mastlog.ldf
+		- `-dD:\MSSQL\DATA\master.mdf`
+		- `-lD:\MSSQL\DATA\mastlog.ldf`
 1. Check SQL Server is installed normally.
 	1. Start Windows Service Manager and start SQL Server service.
 	1. Confirm that SQL Server service status becomes running.
